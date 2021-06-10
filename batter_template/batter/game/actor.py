@@ -22,13 +22,21 @@ class Actor:
         self._position = Point(0, 0)
         self._velocity = Point(0, 0)
 
-    def get_description(self):
+    def get_description(self,velocity, position):
         """Gets the artifact's description.
         
         Returns:
             string: The artifact's description.
         """
-        return self._description 
+        if self.ball.get_position() == self.brick.get_position():
+            self.ball.velocity -= 1
+            if self.ball.velocity == 0:
+                self.delete()
+            # ball.self.velocity[0] = -ball.self.velocity[0]
+            # ball.self.velocity[1] = randint(-8,8)
+            # cast["brick"].pop(brick) 
+        #"if ball hits brick, have it disappear"
+        #return self._description 
 
     def get_position(self):
         """Gets the actor's position in 2d space.
@@ -85,3 +93,4 @@ class Actor:
             position (Point): The given velocity.
         """
         self._velocity = velocity
+

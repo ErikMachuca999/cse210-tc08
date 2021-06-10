@@ -22,4 +22,4 @@ class HandleCollisionsAction(Action):
         for brick in bricks:
             if paddle.get_position().equals(brick.get_position()):
                 description = brick.get_description()
-                marquee.set_text(description) 
+                # marquee.set_text(description) 
