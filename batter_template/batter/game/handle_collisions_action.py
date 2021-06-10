@@ -17,7 +17,7 @@ class HandleCollisionsAction(Action):
         """
         # marquee = cast["marquee"][0] # there's only one
         paddle = cast["paddle"][0] # there's only one
-        brick = cast["brick"]
+        bricks = cast["brick"]
         # marquee.set_text("")
         for brick in bricks:
             if paddle.get_position().equals(brick.get_position()):
