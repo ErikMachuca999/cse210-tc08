@@ -31,11 +31,17 @@ class HandleCollisionsAction(Action):
             if ball.get_position().equals(Point(x, 1)):
                 velocity = ball.get_velocity()
                 ball.set_velocity(Point(velocity.get_x(), velocity.get_y()*-1))
-        # left wall
+        # wall collision
         for y in range(0, constants.MAX_Y):
-            if ball.get_position().equals(Point(0, y)) or ball.get_position().equals(Point(80, y)) :
+            if ball.get_position().equals(Point(1, y)) or ball.get_position().equals(Point(79, y)) :
                 velocity = ball.get_velocity()
                 ball.set_velocity(Point(velocity.get_x()*-1, velocity.get_y()))
+        
+        for i in range(0, 11):
+            if ball.get_position().equals(paddle.get_position()): # + Point(i, -1)):
+                velocity = ball.get_velocity()
+                ball.set_velocity(Point(velocity.get_x(), velocity.get_y()*-1))
+
 
 
 

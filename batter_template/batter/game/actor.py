@@ -28,15 +28,8 @@ class Actor:
         Returns:
             string: The artifact's description.
         """
-        if self.ball.get_position() == self.brick.get_position():
-            self.ball.velocity -= 1
-            if self.ball.velocity == 0:
-                self.delete()
-            # ball.self.velocity[0] = -ball.self.velocity[0]
-            # ball.self.velocity[1] = randint(-8,8)
-            # cast["brick"].pop(brick) 
-        #"if ball hits brick, have it disappear"
-        #return self._description 
+
+        return self._description 
 
     def get_position(self):
         """Gets the actor's position in 2d space.
