@@ -42,10 +42,15 @@ class HandleCollisionsAction(Action):
                 velocity = ball.get_velocity()
                 ball.set_velocity(Point(velocity.get_x(), velocity.get_y()*-1))
 
+        for i in range(0, len(bricks)-1):
+            if ball.get_position().equals(bricks[i].get_position()):
+                velocity = ball.get_velocity()
+                ball.set_velocity(Point(velocity.get_x(), velocity.get_y()*-1))
+                bricks.pop(i)
 
 
-
-
-        # for x in range(0, constants.MAX_X):
-        #     if ball.get_position().equals(Point(x, 19)):
-        #         quit()
+        for x in range(0, constants.MAX_X):
+            if ball.get_position().equals(Point(x, 19)):
+                print("==>GAME :-( OVER<==")
+                quit()
+                
