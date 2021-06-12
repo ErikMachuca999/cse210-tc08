@@ -25,11 +25,11 @@ def main(screen):
     cast["paddle"] = [paddle]
 
     cast["brick"] = []
-    for x in range(5, 75):
+    for x in range(5, 75, 2):
         for y in range(2, 6):
             position = Point(x, y)
             brick = Actor()
-            brick.set_text("*")
+            brick.set_text("[]")
             brick.set_position(position)
             cast["brick"].append(brick)
 
