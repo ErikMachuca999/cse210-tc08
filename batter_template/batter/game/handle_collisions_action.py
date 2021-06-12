@@ -38,7 +38,7 @@ class HandleCollisionsAction(Action):
                 ball.set_velocity(Point(velocity.get_x()*-1, velocity.get_y()))
         
         for i in range(0, 11):
-            if ball.get_position().equals(paddle.get_position()): # + Point(i, -1)):
+            if ball.get_position().equals(Point(paddle.get_position().get_x()+i, paddle.get_position().get_y()-1)): # + Point(i, -1)):
                 velocity = ball.get_velocity()
                 ball.set_velocity(Point(velocity.get_x(), velocity.get_y()*-1))
 
