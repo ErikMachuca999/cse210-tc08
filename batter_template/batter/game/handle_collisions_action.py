@@ -49,5 +49,5 @@ class HandleCollisionsAction(Action):
         # floor collision
         for x in range(0, constants.MAX_X):
             if ball.get_position().equals(Point(x, 19)):
-                print("==> GAME :-( OVER <==")
+                print("- GAME OVER -")
                 quit()
